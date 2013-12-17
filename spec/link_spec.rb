@@ -15,5 +15,6 @@ describe Link do
 			link.destroy
 			expect(Link.count).to eq(0)
 		end
+		
 	end
 end
