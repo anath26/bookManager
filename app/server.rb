@@ -21,7 +21,6 @@ set :partial_template_engine, :erb
 enable :sessions
 
 get '/' do 	
-	flash.now[:notice] = "this is flash notice"
 	@links = Link.all
 	erb :index
 end
