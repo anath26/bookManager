@@ -1,6 +1,19 @@
+<html>
+<head>
+	<link href="/css/application.css" rel="stylesheet" type="text/css">
+	<link href='http://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps:700' rel='stylesheet' type='text/css'>
+</head>
+
 <body>
+
   <% if current_user %>
     Welcome, <%= current_user.email %>
   <% end %>
   <%= yield %>
+
+  <% if flash[:notice] %>
+  <div id="notice"><%= flash[:notice] %></div>
+<% end %>
+
 </body>
+</html>

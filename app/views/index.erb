@@ -1,12 +1,4 @@
-<html>
-<head>
-	<link href="/css/application.css" rel="stylesheet" type="text/css">
-	<link href='http://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps:700' rel='stylesheet' type='text/css'>
-</head>
-
-<body>
-
-	<h1>Welcome to Bookmaker</h1>
+<h1>Welcome to Bookmaker</h1>
 Current links:
 <ul>
 	<% @links.each do |link| %>
@@ -19,11 +11,14 @@ Current links:
 		Url: <input type="text" name="url">
 		Title: <input type="text" name="title">
 		Tags: <input type="text" name="tags">
-		<input type="submit" value="Add link">
+		<input type="submit" value="Add link" >
+	</form>
+	<form action="/users" method="post">
+		Email: <input name="email" type="text">
+		Password: <input name="password" type="password">
+		<input type="submit" value="Sign up">
 	</form>
 </div>
-</body>
-</html>
 
 
 
